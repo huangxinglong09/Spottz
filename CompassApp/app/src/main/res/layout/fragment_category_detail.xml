@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+
+        android:id="@+id/viewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_titlebar"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/lblNavTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="SPOTTZ"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fsize_button"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:paddingLeft="7dp"
+            android:paddingRight="45dp"
+            android:paddingTop="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/menu" />
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:paddingLeft="45dp"
+            android:paddingRight="4dp"
+            android:paddingTop="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/profile" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewTitle"
+        android:layout_marginLeft="10dp"
+        android:background="@null"
+        android:text="Terug naar overzicht"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBack"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Kies een route"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fsize_button"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lblTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/lblContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_medium"
+                android:text="] Pls calculate distance from ‘current location’ to long lat [8] Pls show direct from current location to long lat location."
+                android:textColor="@color/black"
+                android:textSize="@dimen/fsize_detail_content" />
+
+            <TextView
+                android:id="@+id/lblStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin_medium"
+                android:paddingRight="@dimen/margin_medium"
+                android:text="Startlocatie"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fsize_detail_content"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lblAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/lblDistance"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_medium"
+                    android:paddingRight="@dimen/margin_medium"
+                    android:text="stationsstraat 2b, "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fsize_detail_content" />
+
+                <TextView
+                    android:id="@+id/lblPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lblAddress"
+                    android:layout_toLeftOf="@+id/lblDistance"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_medium"
+                    android:paddingRight="@dimen/margin_medium"
+                    android:text="lunteren"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fsize_detail_content" />
+
+                <TextView
+                    android:id="@+id/lblDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/lblPlace"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_medium"
+                    android:paddingRight="8dp"
+                    android:text="145 Meter"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fsize_detail_distance"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/categoryTypeActions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_below="@+id/lblPlace"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnInputCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_button"
+                        android:background="@drawable/rborder_button"
+                        android:text="Voer code in om te starten"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/fsize_button" />
+                    <Button
+                        android:id="@+id/btnPay"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_button"
+                        android:background="@drawable/rborder_button"
+                        android:text="Betaal om te beginnen"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/fsize_button" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="14dp">
+
+                <!--<com.spottz.custom.compass.CompassView-->
+                <!--android:id="@+id/compass_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/colordetail"-->
+                <!--/>-->
+
+                <ImageView
+                    android:id="@+id/ivBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/gps" />
+
+                <ImageView
+
+                    android:id="@+id/ivDirection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/arrow" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/viewStart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnBack"
+        android:background="@color/white_mask"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/lblHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="U bent op de startlocatie. Gebruik de startknop om te beginnen"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fsize_detail_distance"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblHint"
+            android:background="@null"
+            android:text="START"
+            android:textColor="@color/colorPrimary"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Spottz Kompasspel</string>
+
+    <string name="s_confirm">Confirm</string>
+    <string name="s_save">Save</string>
+    <string name="s_cancel">Cancel</string>
+    <string name="s_ok">OK</string>
+    <string name="s_start">Starten</string>
+    <string name="s_login">Inloggen</string>
+    <string name="s_overslaan">Overslaan</string>
+    <string name="s_resetpassword">Vraag nu een wachtwoord aan</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="facebook_app_id">406316999753653</string>
+    <string name="msg_loading">Een moment geduld aub...</string>
+
+    <string name="hint_wachtwoord">Wachtwoord vergeten</string>
+    <string name="hint_login1">Intro content here, meant as explanation for the default \'subscribe\' screen. Intro content here, meant as explanation for the default \'subscribe\' screen,</string>
+    <string name="hint_login2">This is the content for the login screen, meant to explain how its possible to login.</string>
+    <string name="hint_login3">Here content about what happens when \'overslaan\' is used.</string>
+</resources>

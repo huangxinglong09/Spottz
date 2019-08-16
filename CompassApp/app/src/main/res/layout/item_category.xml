@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_category_item">
+
+        <ImageView
+            android:id="@+id/ivCategory"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rborder_image"
+            android:scaleType="centerCrop" />
+
+        <FrameLayout
+            android:id="@+id/ivType"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivCategory"
+            android:layout_alignLeft="@+id/ivCategory"
+            android:background="#fb0208"
+            android:padding="2dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/lblType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:text="gratis"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivLock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/ic_lock"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_toRightOf="@id/ivCategory"
+            android:text="Tegelroute"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fsize_category_item"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small"
+            android:text="Tegelroute"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fsize_category_item"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivNext"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/margin_small"
+            android:src="@drawable/next_icon" />
+
+        <TextView
+            android:id="@+id/lblDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_toLeftOf="@id/ivNext"
+            android:layout_toRightOf="@id/ivCategory"
+            android:paddingRight="@dimen/margin_small"
+            android:text="Tegelroute"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fsize_category_item"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblShortDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/lblDistance"
+            android:layout_below="@id/lblTitle"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_toLeftOf="@id/ivNext"
+            android:layout_toRightOf="@id/ivCategory"
+            android:gravity="start"
+            android:text="Tegelroute"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fsize_category_item" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="rose_height">300dp</dimen>
+
+    <dimen name="fsize_subtab_title">16sp</dimen>
+    <dimen name="fsize_category_item">14sp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="height_category_item">100dp</dimen>
+    <dimen name="height_score_item">110dp</dimen>
+    <dimen name="fsize_score_item">10sp</dimen>
+    <dimen name="height_answer_item">50dp</dimen>
+
+    <dimen name="nav_header_height">160dp</dimen>
+
+
+
+    <dimen name="padding_item">7dp</dimen>
+    <dimen name="fsize_button">20sp</dimen>
+    <dimen name="fsize_question_category">24sp</dimen>
+    <dimen name="fsize_detail_content">14sp</dimen>
+    <dimen name="fsize_detail_distance">20sp</dimen>
+    <dimen name="fsize_direction">16sp</dimen>
+    <dimen name="fsize_question">16sp</dimen>
+
+    <dimen name="fsize_result_title">16sp</dimen>
+    <dimen name="fsize_result_score">24sp</dimen>
+    <dimen name="fsize_result_detail">16sp</dimen>
+
+    <!-- Common Constant  -->
+    <dimen name="size_progressbar">54dp</dimen>
+    <dimen name="height_titlebar">54dp</dimen>
+    <dimen name="width_titlebar_button">48dp</dimen>
+    <dimen name="height_stepbar">48dp</dimen>
+    <dimen name="height_button">48dp</dimen>
+    <dimen name="radius_button">24dp</dimen>
+    <dimen name="height_login_signup_button">52dp</dimen>
+    <dimen name="padding_login_input_image">14dp</dimen>
+    <dimen name="height_input_field">44dp</dimen>
+    <dimen name="height_ios_switch">38dp</dimen>
+    <dimen name="padding_input_image">10dp</dimen>
+    <dimen name="height_segment">36dp</dimen>
+    <dimen name="size_avata">100dp</dimen>
+    <dimen name="height_bottom_tabbar">60dp</dimen>
+    <dimen name="height_optionbar">40dp</dimen>
+    <dimen name="height_textarea">100dp</dimen>
+    <dimen name="height_texttab">44dp</dimen>
+    <dimen name="height_input_combobox">40dp</dimen>
+    <dimen name="height_label_button">36dp</dimen>
+    <dimen name="fsize_navigation_title">16sp</dimen>
+    <dimen name="fsize_input_field">16sp</dimen>
+    <dimen name="fsize_signup_button">18sp</dimen>
+
+
+    <dimen name="margin_share_content">18dp</dimen>
+
+</resources>

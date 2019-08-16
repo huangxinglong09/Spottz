@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/viewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_titlebar"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/lblNavTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="SPOTTZ"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fsize_button"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:paddingLeft="7dp"
+            android:paddingRight="45dp"
+            android:paddingTop="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/menu" />
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:paddingLeft="45dp"
+            android:paddingRight="4dp"
+            android:paddingTop="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/profile" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lblStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewTitle"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:padding="12dp"
+        android:text="Home"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lblStep"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:text="Kies een route"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fsize_question_category"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Wie is de kunstenaar die deze tegel heeft ontworpen?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fsize_detail_content" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1">
+
+            <FrameLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center">
+                <!--<com.spottz.custom.compass.CompassView-->
+                <!--android:id="@+id/compass_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent" />-->
+                <ImageView
+                    android:id="@+id/ivBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/gps" />
+
+                <ImageView
+                    android:id="@+id/ivDirection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/arrow" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

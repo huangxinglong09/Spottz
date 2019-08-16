@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:background="@color/bg_scorelist"
+    >
+    <RelativeLayout
+        android:id="@+id/viewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_titlebar"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="SPOTTZ"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fsize_button"
+            android:textStyle="bold"
+            android:maxLines="1" />
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="7dp"
+            android:paddingRight="45dp"
+            android:paddingTop="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/menu"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:background="@null"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@id/viewTitle"
+        android:padding="8dp"
+        />
+
+    <GridView
+        android:id="@+id/lstList"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnBack"
+        android:columnWidth="82dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="8dp"
+        android:horizontalSpacing="6dp"
+        android:layout_margin="6dp"
+        >
+    </GridView>
+    
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/viewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_titlebar"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/lblNavTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="SPOTTZ"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fsize_button"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:paddingLeft="7dp"
+            android:paddingRight="45dp"
+            android:paddingTop="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/menu" />
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:paddingLeft="45dp"
+            android:paddingRight="4dp"
+            android:paddingTop="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/profile" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/viewQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblStep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Terug naar overzicht"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/lblTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Kies een route"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fsize_question_category"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/lblContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:text="Wie is de kunstenaar die deze tegel heeft ontworpen?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fsize_detail_content" />
+
+            <TextView
+                android:id="@+id/lblQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin_medium"
+                android:text="Wie is de kunstenaar die deze tegel heeft ontworpen?"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fsize_question"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/lstAnswers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0dp"></ListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/viewResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewTitle"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/lblResultStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="Terug naar overzicht"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/lblResTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Kies een route"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fsize_question_category"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblResResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Good Answer"
+            android:textColor="@color/red"
+            android:textSize="@dimen/fsize_question"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblResQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium"
+            android:text="Wie is de kunstenaar die deze tegel heeft ontworpen?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fsize_question"
+            android:textStyle="bold" />
+
+        <!-- Correct Answer -->
+        <TextView
+            android:id="@+id/lblResAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="@dimen/margin_medium"
+            android:text="Wie is de kunstenaar die"
+            android:textColor="@color/answer"
+            android:textSize="@dimen/fsize_question"
+            android:textStyle="bold" />
+
+        <!-- Correct / Wrong Answer Title from Server -->
+        <TextView
+            android:id="@+id/lblDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium"
+            android:text="Wie is de kunstenaar die"
+            android:textColor="@color/answer"
+            android:textSize="@dimen/fsize_detail_content" />
+
+        <ImageView
+            android:id="@+id/ivPreview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            android:layout_weight="0.1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside" />
+
+        <Button
+            android:id="@+id/btnViewCompass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/rborder_button"
+            android:text="Volgende locatie"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fsize_button" />
+    </LinearLayout>
+
+
+</RelativeLayout>

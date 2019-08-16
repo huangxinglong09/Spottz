@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:background="@android:color/white"
+    >
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kies een route"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/fsize_button"
+        android:layout_below="@id/viewTitle"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:maxLines="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/lblTitle"
+        android:background="@color/separator"
+        />
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:id="@+id/viewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_titlebar"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="SPOTTZ"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fsize_button"
+            android:textStyle="bold"
+            android:maxLines="1" />
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="7dp"
+            android:paddingRight="45dp"
+            android:paddingTop="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/menu"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button"
+        android:layout_margin="@dimen/margin_share_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rborder_button"
+        android:text="Delen naar Facebook"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/fsize_button"
+        />
+
+    <ImageView
+        android:id="@+id/ivPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnShare"
+        android:layout_below="@id/viewTitle"
+        android:layout_marginTop="@dimen/margin_share_content"
+        android:layout_marginLeft="@dimen/margin_share_content"
+        android:layout_marginRight="@dimen/margin_share_content"
+        android:scaleType="fitCenter"
+        />
+</RelativeLayout>
